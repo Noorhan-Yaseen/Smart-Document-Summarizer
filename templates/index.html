@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./static/style.css">
+    <title>Smart Document Summarizer</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-file logo-icon"></i>
+                <h1>Smart Document Summarizer</h1>
+            </div>
+            <p class="subtitle">Upload your documents and get concise, AI-powered summaries.</p>
+        </header>
+
+        <div class="card upload-card">
+            <div class="upload-header">
+                <h2>Upload Your Documents</h2>
+                <p>Supported formats: PDF, DOCX (Max 10MB each)</p>
+            </div>
+
+            <div class="file-upload">
+                <input type="file" id="fileInput" class="file-upload-input" accept=".pdf,.docx" multiple>
+                <label for="fileInput" class="file-upload-label">
+                    <i class="fas fa-cloud-upload-alt file-upload-icon"></i>
+                    <span class="file-upload-text">Choose files or drag them here</span>
+                    <span class="file-upload-hint">Click to browse your files</span>
+                </label>
+            </div>
+
+            <button id="uploadBtn" class="btn btn-primary">
+                <i class="fas fa-magic"></i>
+                <span>Generate Summaries</span>
+            </button>
+
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p class="loading-text">Processing your documents...</p>
+            </div>
+
+            <div class="error" id="errorMessage">
+                <p class="error-text">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="errorText">Error message will appear here</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="card file-list-card" id="fileListContainer" style="display: none;">
+            <div class="file-list-header">
+                <h2>Selected Files</h2>
+                <div class="badge">
+                    <i class="fas fa-file-upload"></i>
+                    <span id="fileCount">0 files</span>
+                </div>
+            </div>
+            <div class="file-list" id="fileList">
+            </div>
+        </div>
+
+        <div class="card result-card" id="resultContainer" style="display: none;">
+            <div class="result-header">
+                <h2>Document Summary</h2>
+                <div class="badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Summary Ready</span>
+                </div>
+            </div>
+
+            <div class="results-container" id="resultsContainer">
+            </div>
+        </div>
+    </div>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>

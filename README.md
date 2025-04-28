@@ -8,6 +8,8 @@ This project is a Smart Document Summarizer built using Flask (a Python web fram
 - **Smart Summarization**: Utilizes the BART Large CNN model to generate summaries of the documents.
 - **Web Interface**: Built with Flask to provide an easy-to-use interface for document submission and viewing summaries.
 - **Text Input Option**: Allows users to directly paste large text content for summarization.
+- **Multiple Formats Support**: Currently supports PDF and DOCX formats for document upload.
+ - **Multi-Document Summarization**: Ability to process and summarize multiple documents at once.
 
 ## Installation
 
@@ -73,7 +75,6 @@ Alternatively, you can paste raw text directly into a provided text area, and th
 
 This application uses the **BART Large CNN** model from Hugging Face's Transformers library. It is a pre-trained sequence-to-sequence model designed for tasks like document summarization. The model is optimized for handling long input sequences and generating meaningful, concise summaries.
 
-
 ## Credits
 
 - **Flask**: For building the web application.
@@ -84,9 +85,3 @@ This application uses the **BART Large CNN** model from Hugging Face's Transform
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Future Enhancements
-
-- Allow for multiple languages support for document summarization.
-- Add the ability to process other formats such as `.docx`, `.pdf`, etc.
-- Implement multi-document summarization.
